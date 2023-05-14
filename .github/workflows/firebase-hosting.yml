@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Checkout the Repository
         uses: actions/checkout@v3
-      - name: Install and build the App
-        uses: withastro/action@v0
+      - name: Build the App
+        run: |
+          npm run build
       - name: Install Firebase CLI
         run: |
           curl -sL https://firebase.tools | bash
