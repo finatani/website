@@ -13,16 +13,15 @@ jobs:
       - name: Setup Node.js Version
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x'
+          node-version: "18.x"
       - name: Build the App
-        run: |
-          npm install & npx astro build
+        run: npm install & npx astro build
       - name: Install Firebase CLI
-        run: |
-          curl -sL https://firebase.tools | bash
+        run: curl -sL https://firebase.tools | bash
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: "290.0.1"
+          service_account_email: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_EMAIL }}
+          service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       - name: Deploy to Firebase Hosting
-        env:
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-        run: |
-          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --token "$(cat $GOOGLE_APPLICATION_CREDENTIALS)"
+        run: firebase deploy --only hosting
