@@ -22,7 +22,7 @@ jobs:
           curl -sL https://firebase.tools | bash
       - name: Deploy to Firebase Hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: |
-          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --token $FIREBASE_TOKEN
+          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --token $GOOGLE_APPLICATION_CREDENTIALS
