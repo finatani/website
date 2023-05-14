@@ -1,7 +1,6 @@
 name: Deploy to Production
-on:
-  pull_request:
-    types: [closed]
+"on":
+  push:
     branches:
       - main
 jobs:
