@@ -25,4 +25,4 @@ jobs:
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: |
-          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --token $GOOGLE_APPLICATION_CREDENTIALS
+          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --token "$(cat $GOOGLE_APPLICATION_CREDENTIALS)"
