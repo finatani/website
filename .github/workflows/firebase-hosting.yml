@@ -1,21 +1,24 @@
-name: Deploy to Firebase Hosting
+name: Deploy and Release
 on:
   pull_request:
     types: [closed]
     branches:
       - main
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18.x'
+      - name: Checkout the Repository
+        uses: actions/checkout@v3
+      - name: Install and build the App
+        uses: withastro/action@v0
       - name: Install Firebase CLI
         run: |
           curl -sL https://firebase.tools | bash
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to Firebase Hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
