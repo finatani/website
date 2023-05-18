@@ -1,6 +1,6 @@
 # Aplikasi Web Keuangan Pertanian Finatani
 
-![Finatani Homepage Website](/public/finatani_homepage_v1.png)
+![Finatani Homepage Website](/public/finatani_homepage_v2.png)
 
 **Finatani** adalah sebuah proyek perangkat lunak yang bertujuan untuk membantu petani dalam mengelola keuangan usaha pertanian mereka. Aplikasi ini menyediakan fitur untuk merekam pendapatan dan pengeluaran, memonitor profitabilitas, serta melakukan perencanaan keuangan untuk usaha pertanian.
 
