@@ -1,5 +1,9 @@
 ---
 import Container from "./Container.astro"
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 ---
 
@@ -7,10 +11,10 @@ import Container from "./Container.astro"
     <Container>
         <div class="relative pt-10 md:pt-24 ml-auto">
             <div class="md:w-3/4 text-center mx-auto">
-                <h1 class="text-gray-900 font-bold text-3xl md:text-5xl tracking-[0.5px]">Cara baru untuk mencatat keuangan dan aktivitas pertanianmu.</h1>
-                <p class="md:w-3/4 text-center md:text-xl mx-auto mt-8 text-gray-700 dark:text-gray-300">Dimanapun kamu berada, <span class="font-semibold text-mainGreen">FinaTani</span> menghubungkan aktivitas pertanian kamu dengan keuangan dan teknologi terkini</p>
+                <h1 class="text-gray-900 font-bold text-3xl md:text-5xl tracking-[0.5px]">{ t('jumbotron.title') }</h1>
+                <p class="md:w-3/4 text-center md:text-xl mx-auto mt-8 text-gray-700 dark:text-gray-300">{t('jumbotron.subTitleOne')} <span class="font-semibold text-mainGreen">{t('brand.finatani')}</span> {t('jumbotron.subTitleTwo')}</p>
                 <div class="flex flex-col mt-5 md:mt-20">
-                  <h1 class="font-medium text-xl text-gray-900">Coba FinaTani sekarang</h1>
+                  <h1 class="font-medium text-xl text-gray-900">{ t('jumbotron.ctaTitle') }</h1>
                   <div class="mt-6 flex flex-wrap justify-center gap-y-4 gap-x-6">
                       <a href="#">
                         <img src="/svg/google_play.svg" alt="Google Play">
