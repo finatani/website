@@ -34,7 +34,7 @@ export const ui = {
         'note.highlightOne': 'easy',
         'note.highlightTwo': 'fast',
 
-        'watch.title': '',
+        'watch.title': 'Monitor Activity History',
         'watch.highlightOne': '',
         'watch.highlightTwo': '',
 
@@ -95,7 +95,7 @@ export const ui = {
         'note.highlightOne': 'mudah',
         'note.highlightTwo': 'cepat',
 
-        'watch.title': '',
+        'watch.title': 'Pantau Riwayat Aktivitas',
         'watch.highlightOne': '',
         'watch.highlightTwo': '',
 
