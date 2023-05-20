@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer id="footer">
@@ -10,7 +14,7 @@
             </a>
 
             <div class="mt-6">
-              <p class="md:text-lg font-semibold">Tidak mau ketinggalan informasi terbaru dari kami?</p>
+              <p class="md:text-lg font-semibold">{t('footer.subscribtion.text')}</p>
               <form class="w-full max-w-md mx-auto mt-4">   
                 <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only">Email sign-up</label>
                 <div class="relative">
@@ -20,40 +24,40 @@
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                         </svg>
                     </div>
-                    <input type="email" id="default-email" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="Masukan Email Kamu" required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-mainGreen hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:hover:bg-mainGreen dark:focus:ring-green-800">Berlangganan</button>
+                    <input type="email" id="default-email" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-green-500 dark:focus:border-green-500" placeholder={t('footer.input.placeholder')} required>
+                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-mainGreen hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:hover:bg-mainGreen dark:focus:ring-green-800">{t('footer.input.button')}</button>
                 </div>
             </form>
             </div>
         </div>
         <div class="grid gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">{t('footer.legal.title')}</h2>
               <ul class="text-gray-600 dark:text-gray-400 font-medium">
                   <li class="mb-4">
-                      <a href="#" class="hover:underline">Tentang Kami</a>
+                      <a href="#" class="hover:underline">{t('footer.legal.aboutUs')}</a>
                   </li>
                   <li class="mb-4">
-                      <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                      <a href="#" class="hover:underline">{t('footer.legal.privacyPolicy')}</a>
                   </li>
                   <li>
-                      <a href="#" class="hover:underline">Syarat dan Ketentuan</a>
+                      <a href="#" class="hover:underline">{t('footer.legal.termAndCondition')}</a>
                   </li>
               </ul>
           </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Layanan Pelanggan</h2>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">{t('footer.cs.title')}</h2>
                 <ul class="text-gray-600 dark:text-gray-400 font-medium">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">+6289465736473</a>
+                        <a href="#" class="hover:underline">{t('footer.cs.telephone')}</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline">support@finatani.com</a>
+                        <a href="#" class="hover:underline">{t('footer.cs.email')}</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Coba Sekarang</h2>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">{t('footer.cta.title')}</h2>
                 <ul class="text-gray-600 dark:text-gray-400 font-medium">
                     <li class="mb-4">
                         <a href="#">
