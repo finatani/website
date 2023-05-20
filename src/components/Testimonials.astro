@@ -1,12 +1,16 @@
 ---
 import Container from "./Container.astro"
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 ---
 <div class="text-gray-900" id="testimonials">
   <Container>
     <div class="mb-10 md:mb-20 space-y-4">
       <h2 class="text-center md:w-3/4 mx-auto text-xl text-gray-600 md:text-3xl">
-        <span class="text-gray-900 font-bold">200.000 Petani dan Peternak</span> milenial menggunakan <span class="text-mainGreen font-bold">FinaTani</span>. Lihat bagaimana pengalaman mereka.
+        <span class="text-gray-900 font-bold">{t('testimonial.highlightOne')}</span> {t('testimonial.titleOne')} <span class="text-mainGreen font-bold">{t('brand.finatani')}</span>. {t('testimonial.titleTwo')}
       </h2>
     </div>
     

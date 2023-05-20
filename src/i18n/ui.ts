@@ -1,9 +1,9 @@
 export const languages = {
-    id: 'Indonesian',
+    id: 'Bahasa Indonesia',
     en: 'English'
 };
 
-export const defaultLang = 'en';
+export const defaultLang = 'id';
 
 export const ui = {
     en: {
@@ -34,37 +34,46 @@ export const ui = {
         'note.highlightOne': 'easy',
         'note.highlightTwo': 'fast',
 
-        'watch.title': '',
-        'watch.highlightOne': '',
-        'watch.highlightTwo': '',
+        // TODO: Translate to english by Damasus Riko (@dmsrp)
+        'watch.title': 'Monitor Activity History',
+        'watch.descriptionOne': 'Lihat garis waktu pengelolaan pertanian, kendalikan pemasukan dan pengeluaran untuk meningkatkan',
+        'watch.descriptionTwo': 'dan',
+        'watch.descriptionThree': 'lahan kamu',
+        'watch.highlightOne': 'efisiensi',
+        'watch.highlightTwo': 'produktivitas',
 
-        'reminder.title': '',
-        'reminder.highlightOne': '',
-        'reminder.highlightTwo': '',
+        'reminder.title': 'Pengingat Cerdas / AI',
+        'reminder.descriptionOne': 'Gunakan AI untuk pengingat aktivitas pemeliharaan kamu. Tambahkan pengingat aktivitas pemeliharaan untuk meningkatkan',
+        'reminder.descriptionTwo': 'dan',
+        'reminder.descriptionThree': 'hasil panen dari lahan kamu',
+        'reminder.highlightOne': 'kualitas',
+        'reminder.highlightTwo': 'kuantitas',
 
-        'report.title': '',
-        'report.highlightOne': '',
-        'report.highlightTwo': '',
+        'report.title': 'Laporan Aktivitas',
+        'report.descriptiontOne': 'Kendalikan kinerja lahan kamu melalui laporan, grafik, dan garis waktu yang mudah dibaca. Laporan keuangan, panen dan arus kas kamu dapat menjadi',
+        'report.descriptiontTwo': 'untuk kamu pamerkan ke',
+        'report.highlightOne': 'rapot',
+        'report.highlightTwo': 'investor/multifinance',
 
-        'testimonial.titleOne': '',
-        'testimonial.titleTwo': '',
-        'testimonial.highlightOne': '',
+        'testimonial.titleOne': 'milenial menggunakan',
+        'testimonial.titleTwo': 'Lihat bagaimana pengalaman mereka.',
+        'testimonial.highlightOne': '200.000 Petani dan Peternak',
 
-        'footer.subscribtion.title': '',
-        'footer.subscribtion.text': '',
-        'footer.input.placeholder': '',
-        'footer.input.button': '',
+        'footer.subscribtion.title': 'Subscription',
+        'footer.subscribtion.text': 'Tidak mau ketinggalan informasi terbaru dari kami?',
+        'footer.input.placeholder': 'Masukkan Email Kamu',
+        'footer.input.button': 'Berlangganan',
 
-        'footer.legal.title': '',
-        'footer.legal.aboutUs': '',
-        'footer.legal.privacyPolicy': '',
-        'footer.legal.termAndCondition': '',
+        'footer.legal.title': 'Legal',
+        'footer.legal.aboutUs': 'Tentang Kami',
+        'footer.legal.privacyPolicy': 'Kebijakan Privasi',
+        'footer.legal.termAndCondition': 'Syarat dan Ketentuan',
 
-        'footer.cs.title': '',
-        'footer.cs.telephone': '',
-        'footer.cs.email': '',
+        'footer.cs.title': 'Customer Service',
+        'footer.cs.telephone': '+6289465736473',
+        'footer.cs.email': 'support@finatani.com',
 
-        'footer.cta.title': '',
+        'footer.cta.title': 'Try Now',
     },
 
     id: {
@@ -95,37 +104,44 @@ export const ui = {
         'note.highlightOne': 'mudah',
         'note.highlightTwo': 'cepat',
 
-        'watch.title': '',
-        'watch.highlightOne': '',
-        'watch.highlightTwo': '',
+        'watch.title': 'Pantau Riwayat Aktivitas',
+        'watch.descriptionOne': 'Lihat garis waktu pengelolaan pertanian, kendalikan pemasukan dan pengeluaran untuk meningkatkan',
+        'watch.descriptionTwo': 'dan',
+        'watch.descriptionThree': 'lahan kamu',
+        'watch.highlightOne': 'efisiensi',
+        'watch.highlightTwo': 'produktivitas',
 
-        'reminder.title': '',
-        'reminder.highlightOne': '',
-        'reminder.highlightTwo': '',
+        'reminder.title': 'Pengingat Cerdas / AI',
+        'reminder.descriptionOne': 'Gunakan AI untuk pengingat aktivitas pemeliharaan kamu. Tambahkan pengingat aktivitas pemeliharaan untuk meningkatkan',
+        'reminder.descriptionTwo': 'dan',
+        'reminder.descriptionThree': 'hasil panen dari lahan kamu',
+        'reminder.highlightOne': 'kualitas',
+        'reminder.highlightTwo': 'kuantitas',
 
-        'report.title': '',
-        'report.highlightOne': '',
-        'report.highlightTwo': '',
+        'report.title': 'Laporan Aktivitas',
+        'report.descriptiontOne': 'Kendalikan kinerja lahan kamu melalui laporan, grafik, dan garis waktu yang mudah dibaca. Laporan keuangan, panen dan arus kas kamu dapat menjadi',
+        'report.descriptiontTwo': 'untuk kamu pamerkan ke',
+        'report.highlightOne': 'rapot',
+        'report.highlightTwo': 'investor/multifinance',
 
-        'testimonial.titleOne': '',
-        'testimonial.titleTwo': '',
-        'testimonial.highlightOne': '',
+        'testimonial.titleOne': 'milenial menggunakan',
+        'testimonial.titleTwo': 'Lihat bagaimana pengalaman mereka.',
+        'testimonial.highlightOne': '200.000 Petani dan Peternak',
 
-        'footer.subscribtion.title': '',
-        'footer.subscribtion.text': '',
-        'footer.input.placeholder': '',
-        'footer.input.button': '',
+        'footer.subscribtion.title': 'Subscription',
+        'footer.subscribtion.text': 'Tidak mau ketinggalan informasi terbaru dari kami?',
+        'footer.input.placeholder': 'Masukkan Email Kamu',
+        'footer.input.button': 'Berlangganan',
 
-        'footer.legal.title': '',
-        'footer.legal.aboutUs': '',
-        'footer.legal.privacyPolicy': '',
-        'footer.legal.termAndCondition': '',
+        'footer.legal.title': 'Legal',
+        'footer.legal.aboutUs': 'Tentang Kami',
+        'footer.legal.privacyPolicy': 'Kebijakan Privasi',
+        'footer.legal.termAndCondition': 'Syarat dan Ketentuan',
 
-        'footer.cs.title': '',
-        'footer.cs.telephone': '',
-        'footer.cs.email': '',
+        'footer.cs.title': 'Layanan Pelanggan',
+        'footer.cs.telephone': '+6289465736473',
+        'footer.cs.email': 'support@finatani.com',
 
-        'footer.cta.title': '',
-
+        'footer.cta.title': 'Coba Sekarang',
     },
 } as const;
