@@ -1,9 +1,9 @@
 export const languages = {
-    id: 'Indonesian',
+    id: 'Bahasa Indonesia',
     en: 'English'
 };
 
-export const defaultLang = 'en';
+export const defaultLang = 'id';
 
 export const ui = {
     en: {
