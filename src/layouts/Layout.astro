@@ -52,10 +52,17 @@ const { title } = Astro.props;
 			gtag("js", new Date());
 			gtag("config", "G-DFFHYJ0HBX");
 		</script>
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body class="scroll-smooth bg-white dark:bg-gray-900 bg-[url('/body_background.webp')] md:bg-cover bg-no-repeat">
 		<AppHeader/>
 		<slot />
 		<AppFooter/>
+
+		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script is:inline>
+			AOS.init()
+		</script>
 	</body>
 </html>
