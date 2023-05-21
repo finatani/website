@@ -2,8 +2,7 @@ name: Deploy to Preview
 "on": pull_request
 jobs:
   build_and_preview:
-    permissions:
-      actions: read|write|none
+    permissions: read-all|write-all
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
