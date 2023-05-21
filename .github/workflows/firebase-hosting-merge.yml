@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v3
       - name: Install and Build
-        run: npm install & npx astro build
+        run: npm ci & npx astro build
       - name: Deploy and Release
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
