@@ -1,4 +1,4 @@
-# Aplikasi Web Keuangan Pertanian Finatani
+# Aplikasi Pertanian Finatani
 
 ![Finatani Homepage Website](/public/finatani_homepage.webp)
 
