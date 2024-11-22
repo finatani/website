@@ -10,5 +10,8 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }
-  )]
+  )],
+  server: {
+    port: 3000
+  }
 });
