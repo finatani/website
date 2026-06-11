@@ -1,15 +1,58 @@
-# Aplikasi Pertanian Finatani
+# Website FinaTani
 
 ![Finatani Homepage Website](/public/finatani_homepage.webp)
 
-**Finatani** adalah sebuah proyek perangkat lunak yang bertujuan untuk membantu petani dalam mengelola keuangan usaha pertanian mereka. Aplikasi ini menyediakan fitur untuk merekam pendapatan dan pengeluaran, memonitor profitabilitas, serta melakukan perencanaan keuangan untuk usaha pertanian.
+Repositori ini berisi **website landing page resmi FinaTani** — aplikasi yang membantu petani dan peternak mencatat aktivitas pertanian serta mengelola keuangan usaha mereka, mulai dari proses awal, panen, hingga penjualan ke konsumen akhir.
 
-## Fitur Utama
+Website ini memperkenalkan fitur-fitur utama aplikasi FinaTani:
 
-- Merekam transaksi keuangan seperti penjualan produk pertanian, pengeluaran untuk pemeliharaan tanaman dan hewan, dan lain-lain.
-- Memantau profitabilitas usaha dan menghasilkan laporan keuangan yang mudah dimengerti.
-- Menyediakan fitur perencanaan keuangan, sehingga petani dapat memprediksi arus kas dan membuat rencana bisnis yang lebih efektif.
-- Memungkinkan pengguna untuk melacak inventaris dan mengelola stok produk pertanian.
+- **Mudah Mencatat Aktivitas** — daftarkan lahan dan catat setiap aktivitas dengan mudah dan cepat, kapanpun.
+- **Pantau Riwayat Aktivitas** — lihat garis waktu pengelolaan pertanian serta kendalikan pemasukan dan pengeluaran.
+- **Pengingat Cerdas / AI** — pengingat aktivitas pemeliharaan berbasis AI untuk meningkatkan kualitas dan kuantitas hasil panen.
+- **Laporan Aktivitas** — laporan keuangan, panen, dan arus kas dalam bentuk grafik dan garis waktu yang mudah dibaca.
+
+## Teknologi
+
+- [Astro 6](https://astro.build) — framework web statis
+- [Tailwind CSS 4](https://tailwindcss.com) — styling (via plugin `@tailwindcss/vite`)
+- [Partytown](https://partytown.qwik.dev) — menjalankan skrip pihak ketiga (analytics) di web worker
+- TypeScript
+
+## Struktur Proyek
+
+```text
+src/
+├── components/   # Komponen halaman (HeroSection, About, Feature, Testimonials, dll.)
+├── layouts/      # Layout utama halaman
+├── pages/        # Halaman: / (default), /id, /en
+├── i18n/         # Konfigurasi dua bahasa (Bahasa Indonesia & English)
+└── styles/       # CSS global
+public/           # Aset statis (gambar, logo, SVG)
+```
+
+Website mendukung dua bahasa melalui rute `/id` (default) dan `/en`.
+
+## Menjalankan Secara Lokal
+
+Pastikan [Node.js](https://nodejs.org) sudah terpasang, lalu:
+
+```bash
+# Instal dependensi
+npm install
+
+# Jalankan server pengembangan di http://localhost:3000
+npm run dev
+
+# Build untuk produksi (hasil di folder dist/)
+npm run build
+
+# Pratinjau hasil build
+npm run preview
+```
+
+## Deployment
+
+Website ini di-deploy melalui [Vercel](https://vercel.com) (lihat `vercel.json`). Konfigurasi Firebase Hosting (`firebase.json`) juga tersedia sebagai alternatif.
 
 ## Kontribusi
 
@@ -17,6 +60,4 @@ Kami sangat terbuka untuk kontribusi dari siapa saja yang ingin berpartisipasi d
 
 ## Lisensi
 
-Aplikasi Web Keuangan Pertanian tersedia di bawah lisensi MIT.
-
-Deskripsi tersebut memberikan informasi tentang tujuan dan fitur dari aplikasi web keuangan pertanian, teknologi yang digunakan, instruksi untuk instalasi, dan bagaimana seseorang dapat berkontribusi pada proyek tersebut. Selain itu, deskripsi tersebut juga mencantumkan lisensi yang digunakan oleh proyek.
+Proyek ini tersedia di bawah [lisensi MIT](LICENCE.md).

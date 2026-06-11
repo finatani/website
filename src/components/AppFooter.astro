@@ -6,7 +6,7 @@ const t = useTranslations(lang);
 ---
 
 <footer id="footer">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+  <div class="mx-auto w-full max-w-(--breakpoint-xl) p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
@@ -26,7 +26,7 @@ const t = useTranslations(lang);
                                 </svg>
                             </div>
                             <input type="email" id="default-email" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-green-500 dark:focus:border-green-500" placeholder={t('footer.input.placeholder')} required>
-                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-mainGreen hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:hover:bg-mainGreen dark:focus:ring-green-800">{t('footer.input.button')}</button>
+                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-mainGreen hover:bg-green-800 focus:ring-4 focus:outline-hidden focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:hover:bg-mainGreen dark:focus:ring-green-800">{t('footer.input.button')}</button>
                         </div>
                     </form>
                 </div>

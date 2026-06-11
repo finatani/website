@@ -8,11 +8,11 @@ const t = useTranslations(lang);
 
 <header>
     <nav class="bg-transparent py-2 md:py-6">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-(--breakpoint-xl) flex flex-wrap items-center justify-between mx-auto p-4">
             <a href={`/${lang}/`} class="flex items-center">
                 <img src="/finatani_logo.png" class="h-8 mr-3" alt="Finatani Logo" />
             </a>
-        <div class="flex items-center md:order-2">
+        <div class="relative flex items-center md:order-2">
             <button aria-label="Name" type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-1 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
               {lang === 'id' 
                 ?  <svg class="w-5 h-5 mr-2 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><path fill="#f9f9f9" d="M31.8 62c16.6 0 30-13.4 30-30h-60c0 16.6 13.4 30 30 30"/><path fill="#ed4c5c" d="M31.8 2c-16.6 0-30 13.4-30 30h60c0-16.6-13.4-30-30-30"/></svg>
@@ -21,7 +21,7 @@ const t = useTranslations(lang);
               <svg aria-hidden="true" class="w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z"/></svg>
             </button>
             <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 float-left" id="language-dropdown-menu">
+            <div class="absolute right-0 top-full z-50 hidden mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
               <ul class="py-2 font-medium" role="none">
                 {Object.entries(languages).map(([lang, label]) => (
                   <li>
@@ -38,7 +38,7 @@ const t = useTranslations(lang);
                 ))}
               </ul>
             </div>
-            <button data-collapse-toggle="mobile-menu-language-select" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-language-select" aria-expanded="false">
+            <button data-collapse-toggle="mobile-menu-language-select" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-language-select" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
           </button>
@@ -58,5 +58,29 @@ const t = useTranslations(lang);
         </div>
         </div>
       </nav>
-      
+
 </header>
+
+<script>
+  for (const attribute of ['data-dropdown-toggle', 'data-collapse-toggle']) {
+    document.querySelectorAll(`[${attribute}]`).forEach((button) => {
+      const target = document.getElementById(button.getAttribute(attribute) ?? '');
+      if (!target) return;
+      button.addEventListener('click', () => {
+        const isHidden = target.classList.toggle('hidden');
+        button.setAttribute('aria-expanded', String(!isHidden));
+      });
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    document.querySelectorAll('[data-dropdown-toggle]').forEach((button) => {
+      const target = document.getElementById(button.getAttribute('data-dropdown-toggle') ?? '');
+      if (!target || target.classList.contains('hidden')) return;
+      if (!(event.target instanceof Node)) return;
+      if (button.contains(event.target) || target.contains(event.target)) return;
+      target.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
