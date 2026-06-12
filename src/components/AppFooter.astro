@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer id="footer">
+<footer id="footer" class="border-t border-gray-200/70 bg-white">
   <div class="mx-auto w-full max-w-(--breakpoint-xl) p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -47,29 +47,24 @@ const t = useTranslations(lang);
                         <!-- @ts-ignore -->
                         <div class="quick_form_7_css" name="SIGNUP_BODY">
                             <div>
-                                <div id="SIGNUP_HEADING" class="md:text-lg font-semibold mb-4">{t('footer.subscribtion.text')}</div>
+                                <div id="SIGNUP_HEADING" class="text-sm font-semibold mb-3">{t('footer.subscribtion.text')}</div>
                                 <div class="mb-4" style="position:relative;">
                                     <div id="Zc_SignupSuccess" class="hidden rounded-lg ring-1 p-4 ring-green-300 bg-green-50 items-center gap-2" style="word-break:break-all ">
                                         <!-- @ts-ignore -->
                                         <img class="successicon" src="https://zcsub-cmpzourl.maillist-manage.com/images/challangeiconenable.jpg" align="absmiddle">
-                                        <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
+                                        <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: inherit; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
                                     </div>
                                 </div>
-                                <form method="POST" id="zcampaignOptinForm" class="w-full flex flex-col gap-2" action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" target="_zcSignup">
-                                    <div id="errorMsgDiv" class="hidden">Please correct the marked field(s) below.</div>
+                                <form method="POST" id="zcampaignOptinForm" class="flex w-full max-w-sm flex-col gap-2" action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" target="_zcSignup">
+                                    <div id="errorMsgDiv" class="hidden text-sm text-red-500">Please correct the marked field(s) below.</div>
                                     <div class="SIGNUP_FLD">
-                                        <div>Email</div>
                                         <!-- @ts-ignore -->
-                                        <input type="email" class="block w-full px-4 py-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-green-500 dark:focus:border-green-500" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
-                                        <span class="text-sm text-gray-400">Pastikan format email benar.</span>
+                                        <input type="text" placeholder={t('footer.input.name')} class="h-10 w-full rounded-lg border border-gray-200 bg-white px-3.5 text-sm text-gray-900 placeholder-gray-400 focus:border-gray-400 focus:outline-hidden focus:ring-4 focus:ring-gray-100" changeitem="SIGNUP_FORM_FIELD" name="LASTNAME" id="EMBED_FORM_NAME_LABEL">
                                     </div>
-                                    <div class="SIGNUP_FLD">
-                                        <div>Nama</div>
+                                    <div class="SIGNUP_FLD relative">
                                         <!-- @ts-ignore -->
-                                        <input type="text" class="block w-full px-4 py-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-green-500 dark:focus:border-green-500" changeitem="SIGNUP_FORM_FIELD" name="LASTNAME" id="EMBED_FORM_NAME_LABEL">
-                                    </div>
-                                    <div class="SIGNUP_FLD w-full flex items-center justify-end mt-4">
-                                        <input type="button" class="w-max rounded-md px-4 py-2 cursor-pointer text-white bg-green-500" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Berlangganan">
+                                        <input type="email" placeholder={t('footer.input.placeholder')} class="h-10 w-full rounded-lg border border-gray-200 bg-white pl-3.5 pr-32 text-sm text-gray-900 placeholder-gray-400 focus:border-gray-400 focus:outline-hidden focus:ring-4 focus:ring-gray-100" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                                        <input type="button" class="absolute right-1 top-1 h-8 cursor-pointer rounded-md bg-gray-900 px-3 text-xs font-semibold text-white hover:bg-gray-700" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value={t('footer.input.button')}>
                                     </div>
                                     <input type="hidden" id="fieldBorder" value="">
                                     <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
@@ -109,7 +104,7 @@ const t = useTranslations(lang);
                 <!--Zoho Campaigns Web-Optin Form Ends Here-->
             </div>
         </div>
-        <div class="grid gap-8 sm:gap-6 sm:grid-cols-3">
+        <div class="grid gap-8 sm:gap-6 sm:grid-cols-2">
           <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">{t('footer.legal.title')}</h2>
               <ul class="text-gray-600 dark:text-gray-400 font-medium">
@@ -132,21 +127,6 @@ const t = useTranslations(lang);
                     </li>
                     <li>
                         <a href=/ class="hover:underline">{t('footer.cs.email')}</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">{t('footer.cta.title')}</h2>
-                <ul class="text-gray-600 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href=/>
-                          <img src="/svg/google_play.svg" alt="Google Play">
-                        </a>
-                    </li>
-                    <li>
-                        <a href=/>
-                          <img src="/svg/app_store.svg" alt="App store">
-                        </a>
                     </li>
                 </ul>
             </div>

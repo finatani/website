@@ -1,16 +1,18 @@
 ---
-import Feature from '@/components/Feature.astro';
-import About from '@/components/About.astro';
-import HeroSection from '@/components/HeroSection.astro';
 import Layout from '@/layouts/Layout.astro';
-import Testimonials from '@/components/Testimonials.astro';
+import Hero from '@/components/Hero.astro';
+import TrackingSection from '@/components/TrackingSection.astro';
+import InsightsShowcase from '@/components/InsightsShowcase.astro';
+import AssistantSection from '@/components/AssistantSection.astro';
+import CtaSection from '@/components/CtaSection.astro';
 ---
 
-<Layout title="Welcome to Finatani | Aplikasi dengan fitur pencatatan pendapatan dan pengeluaran, memonitor profitabilitas, serta melakukan perencanaan keuangan untuk usaha pertanian.">
-	<main class="space-y-40 mb-40">
-		<HeroSection/>
-		<About/>
-		<Feature/>
-		<Testimonials/>
+<Layout title="FinaTani | Cara Lebih Sederhana untuk Mengelola Tanimu — catat aktivitas, pantau arus kas, dan ikuti harga komoditas terkini.">
+	<main class="mb-16 space-y-16 md:mb-24 md:space-y-32">
+		<Hero/>
+		<TrackingSection/>
+		<InsightsShowcase/>
+		<AssistantSection/>
+		<CtaSection/>
 	</main>
 </Layout>

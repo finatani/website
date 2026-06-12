@@ -22,7 +22,7 @@ Website ini memperkenalkan fitur-fitur utama aplikasi FinaTani:
 
 ```text
 src/
-├── components/   # Komponen halaman (HeroSection, About, Feature, Testimonials, dll.)
+├── components/   # Komponen halaman (Hero, TrackingSection, InsightsShowcase, dll.)
 ├── layouts/      # Layout utama halaman
 ├── pages/        # Halaman: / (default), /id, /en
 ├── i18n/         # Konfigurasi dua bahasa (Bahasa Indonesia & English)

@@ -1,20 +1,20 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-  integrations: [partytown(
-    {
+  integrations: [
+    partytown({
       config: {
         forward: ["dataLayer.push"],
       },
-    }
-  )],
+    }),
+  ],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   server: {
-    port: 3000
-  }
+    port: 3000,
+  },
 });
